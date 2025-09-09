@@ -3,14 +3,14 @@ class Mom:
         self.color = color
 
 class Child(Mom):
-    def __init__(self, name):
+    def __init__(self, name, color):
         self.name = name
+        super().__init__(color)
 
-adult = Mom("Red")
+adult = Mom('Pink')
+children = Child('Blue', 'Alice')
 
-children = Child("Blue")
+print(f'Mom: {vars(adult)} \nChild: {vars(children)}')
 
-print(adult.color)
-print(children.color)
-print(children.name)
+
 
